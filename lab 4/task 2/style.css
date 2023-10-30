@@ -1,0 +1,25 @@
+.hide {
+    margin-top: 10px;
+    display: none;
+}
+
+label {
+    font-size: 24;
+    float: right;
+}
+
+#block1, #block2, #block3 {
+    margin-top: 20px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 10px;
+    background-color: rgb(119, 180, 201);
+}
+
+.show {
+    background-color: rgb(182, 218, 230);
+    padding: 10px;
+    border-top: 1px solid black;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

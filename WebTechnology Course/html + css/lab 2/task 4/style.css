@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: green;
+    text-align: center;
+    margin-top: 0;
+    font-size: 35px;
+}
+
+b {
+    color: red;
+}
+
+i {
+    color: rgb(198, 36, 177)
+}
+
+p {
+    text-align: justify;
+    text-indent: 30px;
+    color: rgb(231, 135, 9);
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.481);
+}
+
+.header {
+    background-image: url("florida.jpg");
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+}
+
+.background {
+    background-image: url("miami\ 2.jpg");
+    background-size: cover;
+    background-position: center;
+
+
+
+}
+
+.mainText {
+    background-color: rgba(9, 174, 240, 0.455);
+    margin: 0px 350px;
+    padding: 300px;
+}

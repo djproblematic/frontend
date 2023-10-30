@@ -1,0 +1,36 @@
+/* Стилі для контейнера слайд-шоу */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+}
+
+/* Стилі для зображень у слайд-шоу */
+.slide {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Стилі для кнопок "Назад" і "Вперед" */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
