@@ -2,7 +2,7 @@ let symbols_counter = [0, 0, 0, 0, 0]
 let strings = document.querySelectorAll("p")
 
 function fillingCounter() {
-    for (let i=0; i<strings.length; ++i) {
+    for (let i = 0; i < strings.length; ++i) {
         symbols_counter[i] = strings[i].innerText.length
         console.log(symbols_counter[i])
     }
@@ -17,7 +17,7 @@ console.log(Math.max(...arr))
 
 function parseElements(arr) {
     let counter = 0
-    for (let i=0; i<arr.length; ++i) {
+    for (let i = 0; i < arr.length; ++i) {
         if (arr[i] % 2 == 0) {
             counter++
         }
@@ -27,7 +27,7 @@ function parseElements(arr) {
 
 function nonParseElements(arr) {
     let counter = 0
-    for (let i=0; i<arr.length; ++i) {
+    for (let i = 0; i < arr.length; ++i) {
         if (arr[i] % 2 != 0) {
             counter++
         }
@@ -40,7 +40,7 @@ console.log(nonParseElements(arr))
 
 function hasTwoDigits(arr) {
     let counter = 0
-    for (let i=0; i<arr.length; ++i) {
+    for (let i = 0; i < arr.length; ++i) {
         if (parseInt(arr[i] / 10) != 0) {
             counter++
         }
@@ -52,7 +52,7 @@ console.log(hasTwoDigits(arr))
 
 function positiveNumbers(arr) {
     let counter = 0
-    for (let i=0; i<arr.length; ++i) {
+    for (let i = 0; i < arr.length; ++i) {
         if (arr[i] > 0) {
             counter++
         }
@@ -62,7 +62,7 @@ function positiveNumbers(arr) {
 
 function negativeNumbers(arr) {
     let counter = 0
-    for (let i=0; i<arr.length; ++i) {
+    for (let i = 0; i < arr.length; ++i) {
         if (arr[i] < 0) {
             counter++
         }

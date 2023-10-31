@@ -1,13 +1,14 @@
-*{margin-bottom: 10px;
+* {
+    margin-bottom: 10px;
     width: 30vw;
 }
-/* Сховати стандартний чекбокс */
- input[type="checkbox"] {
+
+input[type="checkbox"] {
     display: none;
 }
 
-/* Стилі для заголовків секцій */
-input[type="checkbox"] + label {
+
+input[type="checkbox"]+label {
     background-color: #f0f0f0;
     padding: 10px;
     cursor: pointer;
@@ -16,20 +17,20 @@ input[type="checkbox"] + label {
     display: block;
 }
 
-/* Зміна кольору заголовка при наведенні */
-input[type="checkbox"] + label:hover {
+
+input[type="checkbox"]+label:hover {
     background-color: #ddd;
 }
 
-/* Стилі для вмісту секцій (початково прихований) */
-input[type="checkbox"] ~ div {
+
+input[type="checkbox"]~div {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
 }
 
-/* Відображення вмісту секції при виборі чекбокса */
-input[type="checkbox"]:checked ~ label + div {
+
+input[type="checkbox"]:checked~label+div {
     max-height: 1000px;
     transition: max-height 0.3s ease-in-out;
 }

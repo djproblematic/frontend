@@ -1,9 +1,9 @@
-td{
+td {
     border: 1px black solid;
     width: 100px;
     height: 100px;
 }
 
-.selected{
+.selected {
     background-color: yellow;
 }

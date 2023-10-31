@@ -7,10 +7,10 @@ function createMatrix(arr) {
     matrixRows = document.getElementById("row").value
     matrixColls = document.getElementById("coll").value
 
-    for (let i=0; i<matrixRows; ++i) {
+    for (let i = 0; i < matrixRows; ++i) {
         let row = []
-        for (let j=0; j<matrixColls; ++j) {
-            row.push(Math.floor(Math.random() * (9 + 9 + 1)) -9)
+        for (let j = 0; j < matrixColls; ++j) {
+            row.push(Math.floor(Math.random() * (9 + 9 + 1)) - 9)
         }
         arr.push(row)
     }
@@ -19,8 +19,8 @@ function createMatrix(arr) {
 
 function positiveElements(matrix) {
     let counter = 0
-    for (let i=0; i<matrixRows; ++i) {
-        for (let j=0; j<matrixColls; ++j) {
+    for (let i = 0; i < matrixRows; ++i) {
+        for (let j = 0; j < matrixColls; ++j) {
             if (matrix[i][j] > 0) {
                 counter++
             }
@@ -36,9 +36,9 @@ function displayMatrix(matrix) {
 function rowsWithoutNullElements(matrix) {
     let counter = 0
     let positive
-    for (let i=0; i<matrixRows; ++i) {
+    for (let i = 0; i < matrixRows; ++i) {
         positive = false
-        for (let j=0; j<matrixColls; ++j) {
+        for (let j = 0; j < matrixColls; ++j) {
             if (matrix[i][j] != 0) {
                 positive = true
             }
@@ -53,9 +53,9 @@ function rowsWithoutNullElements(matrix) {
 function collsWithNullElements(matrix) {
     let counter = 0
     let positive
-    for (let i=0; i<matrixColls; ++i) {
+    for (let i = 0; i < matrixColls; ++i) {
         positive = false
-        for (let j=0; j<matrixRows; ++j) {
+        for (let j = 0; j < matrixRows; ++j) {
             if (matrix[j][i] === 0) {
                 positive = true
             }
@@ -70,10 +70,10 @@ function collsWithNullElements(matrix) {
 function sameElementsInRow(matrix) {
     let row = 0
     let mostSameElementsInRow = 0
-    for (let i=0; i < matrixRows; ++i) {
+    for (let i = 0; i < matrixRows; ++i) {
         let elementsInRow = []
         let seriesOfSameElements = 0
-        for (let j=0; j < matrixColls; ++j) {
+        for (let j = 0; j < matrixColls; ++j) {
             if (elementsInRow.indexOf(matrix[i][j]) === -1) {
                 elementsInRow.push(matrix[i][j])
             }
@@ -81,7 +81,7 @@ function sameElementsInRow(matrix) {
                 seriesOfSameElements++
             }
         }
-        if (mostSameElementsInRow < seriesOfSameElements)  {
+        if (mostSameElementsInRow < seriesOfSameElements) {
             mostSameElementsInRow = seriesOfSameElements
             row = i
         }
@@ -90,16 +90,16 @@ function sameElementsInRow(matrix) {
 }
 
 function mullRowsWithoutNulls(matrix) {
-    for (let i=0; i < matrixRows; ++i) {
+    for (let i = 0; i < matrixRows; ++i) {
         let nulls = false
-        for (let j=0; j < matrixColls; ++j) {
+        for (let j = 0; j < matrixColls; ++j) {
             if (matrix[i][j] === 0) {
                 nulls = true
             }
         }
         if (!nulls) {
             let mullRow = 1
-            for (let j=0; j < matrixColls; ++j) {
+            for (let j = 0; j < matrixColls; ++j) {
                 mullRow *= matrix[i][j]
             }
             console.log(`Mulltiply in rows ${i} without nulls = ${mullRow}`)
@@ -108,16 +108,16 @@ function mullRowsWithoutNulls(matrix) {
 }
 
 function mullCollsWithoutNulls(matrix) {
-    for (let i=0; i < matrixColls; ++i) {
+    for (let i = 0; i < matrixColls; ++i) {
         let nulls = false
-        for (let j=0; j < matrixRows; ++j) {
+        for (let j = 0; j < matrixRows; ++j) {
             if (matrix[j][i] === 0) {
                 nulls = true
             }
         }
         if (!nulls) {
             let mullRow = 1
-            for (let j=0; j < matrixRows; ++j) {
+            for (let j = 0; j < matrixRows; ++j) {
                 mullRow *= matrix[j][i]
             }
             console.log(`Mulltiply in colls ${i} without nulls = ${mullRow}`)
@@ -126,16 +126,16 @@ function mullCollsWithoutNulls(matrix) {
 }
 
 function summCollsWithoutNulls(matrix) {
-    for (let i=0; i < matrixColls; ++i) {
+    for (let i = 0; i < matrixColls; ++i) {
         let negatives = false
-        for (let j=0; j < matrixRows; ++j) {
+        for (let j = 0; j < matrixRows; ++j) {
             if (matrix[j][i] < 0) {
                 negatives = true
             }
         }
         if (negatives) {
             let mullRow = 1
-            for (let j=0; j < matrixRows; ++j) {
+            for (let j = 0; j < matrixRows; ++j) {
                 mullRow += matrix[j][i]
             }
             console.log(`Summ in colls ${i} where elements < 0 = ${mullRow}`)
@@ -167,8 +167,8 @@ function maxSumMainDiagonals(matrix) {
             }
             if (i !== 0) {
                 elemDiagonals[k] += matrix[i][j]
-                elemDiagonals[k+1] += matrix[j][i]
-                k+=2
+                elemDiagonals[k + 1] += matrix[j][i]
+                k += 2
             }
         }
     }

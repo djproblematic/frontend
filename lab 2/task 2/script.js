@@ -17,5 +17,5 @@ function ucFirst(txt) {
     let indexOfUpperLetter = 0
     let newTxt = txt[indexOfUpperLetter].toUpperCase() + txt.slice(indexOfUpperLetter + 1, txt.lenght)
     return newTxt;
- }
- console.log(ucFirst('some text'));
+}
+console.log(ucFirst('some text'));

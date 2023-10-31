@@ -1,4 +1,4 @@
-function changestyle(element, color, backgroundColor, fontsize, padding, textAlign){
+function changestyle(element, color, backgroundColor, fontsize, padding, textAlign) {
     element.style.color = color;
 
     element.style.backgroundColor = backgroundColor;

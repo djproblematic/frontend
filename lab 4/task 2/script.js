@@ -7,7 +7,7 @@ function addClassHide(event) {
 }
 
 function addEvent(blocks) {
-    blocks.forEach(function (block){
+    blocks.forEach(function (block) {
         block.addEventListener('click', addClassHide)
     });
 }

@@ -10,17 +10,17 @@ label {
     display: none;
 }
 
-.name:invalid + .req {
+.name:invalid+.req {
     display: block;
-}  
+}
 
-.email:invalid + .req {
+.email:invalid+.req {
     display: block;
-}  
+}
 
-.password:invalid + .req {
+.password:invalid+.req {
     display: block;
-}  
+}
 
 
 input {
@@ -70,4 +70,3 @@ input.name:valid {
     border-radius: 45px;
     background-color: rgb(13, 245, 245);
 }
-
