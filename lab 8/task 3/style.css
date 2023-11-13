@@ -1,36 +1,25 @@
-/* Стилі для контейнера слайд-шоу */
-.slideshow-container {
-    position: relative;
-    max-width: 100%;
-}
-
-/* Стилі для зображень у слайд-шоу */
-.slide {
-    display: none;
-}
-
 img {
+    height: 100%;
     width: 100%;
-    height: auto;
 }
 
-/* Стилі для кнопок "Назад" і "Вперед" */
-.prev, .next {
-    cursor: pointer;
+.slide {
+    transition: 0.7s ease;
+}
+
+.container {
+    border-radius: 10px;
+    border: 10px solid darkslateblue;
+    width: 500px;
+    height: 500px;
     position: absolute;
     top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    overflow: hidden;
 }
 
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
+body {
+    background-color: darkslategrey;
 }

@@ -1,34 +1,11 @@
-let slideIndex = 0;
+let slider = document.querySelector(".slide");
+let sliderStyle = getComputedStyle(slider);
 
-showSlides();
-
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+setInterval(() => {
+    let marginLeft = parseInt(sliderStyle.marginLeft.replace("px", ""));
+    if (marginLeft > -(parseInt(sliderStyle.width.replace("px", "")) * 3)) {
+        slider.style.marginLeft = `${marginLeft - parseInt(sliderStyle.width.replace("px", ""))}px`;
+    } else {
+        slider.style.marginLeft = "0px"
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 2000); // Змінюйте зображення кожні 2 секунди
-}
-
-// Обробка кнопок "Назад" і "Вперед"
-document.querySelector(".prev").addEventListener("click", () => {
-    slideIndex--;
-    if (slideIndex < 1) {
-        slideIndex = slides.length;
-    }
-    showSlides();
-});
-
-document.querySelector(".next").addEventListener("click", () => {
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    showSlides();
-});
+}, 1000)

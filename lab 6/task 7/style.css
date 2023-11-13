@@ -1,0 +1,22 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+}
+
+.head,
+.content {
+    border: 1px solid black;
+}
+
+.paragraph {
+    margin-bottom: 10px;
+}
+
+label,
+input,
+textarea,
+button {
+    width: 100%;
+    height: 40px;
+}

@@ -1,0 +1,10 @@
+img{
+    width: 150px;
+    height: 150px;
+    opacity: 1;
+}
+
+.nonactive{
+    filter:grayscale(100%);
+    opacity: (0.5);
+}

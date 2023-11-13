@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function () {
+    initializeTimers(); // Вызываю функцию инициализации при загрузке страницы
+});
+
+function initializeTimers() {
+    for (let i = 0; i < timerCount; i++) {
+        timerValues[i] = { h: 0, m: 55, s: 0, timerId: null }; // Установил начальное значение для каждого таймера
+        timerUpdate(i); // Обновляет отображение
+    }
+}
+
+
 function clockTick() {
     let date = new Date();
     let hours = date.getHours();
@@ -77,7 +89,6 @@ function timerTick(index) {
 
     if (timerValues[index].h === 0 && timerValues[index].m === 0 && timerValues[index].s === 0) {
         clearInterval(timerValues[index].timerId);
-        // Добавьте здесь код, который выполнится по истечении времени (например, вибрацию или уведомление).
     }
 }
 
@@ -129,7 +140,7 @@ function timerUpdate(index) {
 // document.documentElement.addEventListener('click', function (event) {
 //     let parentTimerDiv = event.target.closest('.timer');
 //     if (parentTimerDiv !== null) {
-        
+
 //         let tablo = parentTimerDiv.querySelector('.tablo')
 //         let startButton = parentTimerDiv.querySelector('.startButton');
 //         let stopButton = parentTimerDiv.querySelector('.stopButton');
@@ -186,9 +197,8 @@ document.documentElement.addEventListener('click', function (event) {
 
         if (event.target.classList.contains('resetButton')) {
             clearInterval(timerValues[currentTimerIndex].timerId);
-            timerValues[currentTimerIndex] = { h: 1, m: 30, s: 20, timerId: null };
-             // Установите начальное время обратного отсчета
-            timerUpdate(currentTimerIndex);
+            timerValues[currentTimerIndex] = { h: 0, m: 55, s: 0, timerId: null };
+            timerUpdate(currentTimerIndex);  // Время для обратного отсчёта
             startButton.removeAttribute('disabled');
             stopButton.setAttribute('disabled', 'disabled');
             resetButton.setAttribute('disabled', 'disabled');

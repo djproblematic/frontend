@@ -1,0 +1,18 @@
+td {
+    border: 1px black solid;
+    width: 80px;
+    height: 80px;
+}
+
+.sketchedCol {
+    background-color: yellow;
+}
+
+.sketchedCol2{
+    background-color: blue;;
+}
+
+div {
+    display: flex;
+
+}
