@@ -7,7 +7,7 @@ input_width.addEventListener('input', (event) => {
     block.style.width = `${input_width.value}px`
 })
 
-// Привязываю значение инпутов к дивблоку
+// Прив'язую значення інуптів до дівблоку
 
 let input_height = document.getElementById("height")
 

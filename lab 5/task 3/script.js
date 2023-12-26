@@ -9,7 +9,7 @@ class Question {
     changeResult(result) {
         this.result = result;
     }
-} // Задания от 1 по 10
+} // Завдання від 1 до 10
 
 function radioChecked() {
     let variants = document.querySelectorAll('input');
@@ -22,7 +22,7 @@ function radioChecked() {
             });
         });
     })
-} // Функция делает выбранным только один вариант
+} // Функція робить обраним тільки один варіант
 
 function answer(event) {
     if (index < 10) {
@@ -57,7 +57,7 @@ function answer(event) {
         message.textContent = `Correct answers: ${result_counter + 1}/${tasks.length}`
     }
 
-}   // Функция проверят задание и переходит к следующему
+}   // Функція перевіряє завдання і переходить до наступного
 
 
 
@@ -73,4 +73,4 @@ nextQues.addEventListener('click', answer);
 
 let answers = document.querySelectorAll('label');
 
-// Заполнение
+// Заповнення
