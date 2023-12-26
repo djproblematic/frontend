@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    initializeTimers(); // Вызываю функцию инициализации при загрузке страницы
+    initializeTimers(); // Викликаю функцію ініціалізації під час завантаження сторінки
 });
 
 function initializeTimers() {
     for (let i = 0; i < timerCount; i++) {
-        timerValues[i] = { h: 0, m: 55, s: 0, timerId: null }; // Установил начальное значение для каждого таймера
-        timerUpdate(i); // Обновляет отображение
+        timerValues[i] = { h: 0, m: 55, s: 0, timerId: null }; // Встановив початкове значення для кожного таймера
+        timerUpdate(i); // Оновлює відображення
     }
 }
 
@@ -181,7 +181,7 @@ document.documentElement.addEventListener('click', function (event) {
 
         if (event.target.classList.contains('startButton')) {
             // parentTimerDiv.style.borderColor = 'red';
-            clearInterval(timerValues[currentTimerIndex].timerId); // Сброс предыдущего таймера
+            clearInterval(timerValues[currentTimerIndex].timerId); // Скидання попереднього таймера
             timerValues[currentTimerIndex].timerId = setInterval(timerTick, 1000, currentTimerIndex);
             startButton.setAttribute('disabled', 'disabled');
             stopButton.removeAttribute('disabled');

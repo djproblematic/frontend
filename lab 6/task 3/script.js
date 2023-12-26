@@ -1,47 +1,47 @@
-// Определение функции для вычисления позиции цветовой остановки в градиенте
+// Визначення функції обчислення позиції колірної зупинки в градієнті
 let positionOfGradient = function (index, length) {
     return parseFloat(index * 100 / length / 100);
 }
 
-// Выбор всех элементов td на странице
+// Виберіть всі елементи td на сторінці
 let tds = document.querySelectorAll("td");
 tds.forEach((td) => {
-    // Добавление слушателя события клика к каждой ячейке
+    // Додавання слухача події кліка до кожного осередку
     td.addEventListener('click', (event) => {
         event.target.classList.toggle('chosen');
         let chosen_tds = document.querySelectorAll("td.chosen");
         if (chosen_tds.length > 1) {
-            // Если выбраны две или более ячейки
-            // Выбор элемента canvas
+            // Якщо вибрано два або більше осередки
+            // Вибір елемента canvas
             let canvas = document.querySelector("canvas");
             let ctx_canvas = canvas.getContext("2d");
-            // Создание линейного градиента
+            // Створення лінійного градієнта
             let gradient = ctx_canvas.createLinearGradient(0, 0, 0, 170);
-            // Добавление цветовых остановок в градиент на основе выбранных ячеек
+            // Додавання колірних зупинок у градієнт на основі вибраних осередків
             chosen_tds.forEach((chosen_td, index) => {
                 console.log(positionOfGradient(index, chosen_tds.length - 1));
                 gradient.addColorStop(positionOfGradient(index, chosen_tds.length - 1), chosen_td.style.backgroundColor);
             })
             ctx_canvas.fillStyle = gradient;
-            // Заливка всего canvas
+            // Заливка всього canvas
             ctx_canvas.fillRect(0, 0, canvas.width, canvas.height);
         } else if (chosen_tds.length === 1) {
-            // Если выбрана только одна ячейка
-            // Задание цвета заливки контекста canvas цветом выбранной ячейки
+            // Якщо вибрана лише одна комірка
+            // Завдання кольору заливки контексту canvas кольором вибраної комірки
             document.querySelector("canvas").getContext("2d").fillStyle = chosen_tds[0].style.backgroundColor;
-            // Заливка всего canvas
+            // Заливка всього canvas
             document.querySelector("canvas").getContext("2d").fillRect(0, 0, document.querySelector("canvas").width, document.querySelector("canvas").height);
         } else {
             // Если ячейки не выбраны
-            // Задание цвета заливки контекста canvas белым цветом
+            // Завдання кольору заливки контексту canvas білим кольором
             document.querySelector("canvas").getContext("2d").fillStyle = "white";
-            // Заливка всего canvas
+            // Заливка всього canvas
             document.querySelector("canvas").getContext("2d").fillRect(0, 0, document.querySelector("canvas").width, document.querySelector("canvas").height);
         }
     })
 })
 
-// Выбор всех выбранных ячеек после обработки событий
+// Вибір усіх вибраних комірок після обробки подій
 let chosen_tds = document.querySelectorAll("td.chosen")
 chosen_tds.forEach((event) => {
     console.log(chosen_tds.style.backgroundColor)

@@ -18,4 +18,4 @@ document.querySelector("button").addEventListener('click', (event) => {
     table.appendChild(newTr)
 })
 
-// Добавляю td и tr со значением input
+// Добавляю td и tr із значенням input
